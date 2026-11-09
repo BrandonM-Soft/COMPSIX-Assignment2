@@ -1,4 +1,6 @@
 const fs = require('fs');
+const quotes = './data/quotes.txt'
+const sampleText = './data/sample-text.txt'
 
 function wordcount(file) {
     const content = fs.readFileSync(file, 'utf8');
@@ -33,3 +35,13 @@ module.exports = {
     linecount,
     longestword
 };
+
+// Function tests with `quotes.txt`
+console.log('Number of words in ' + quotes + ' : ' + wordcount(quotes))
+console.log('Number of lines in ' + quotes + ' : ' + linecount(quotes))
+console.log('Longest word in ' + quotes + ' : ' + longestword(quotes))
+
+// Function tests with `sample-text.txt`
+console.log('Number of words in ' + sampleText + ' : ' + wordcount(sampleText))
+console.log('Number of lines in ' + sampleText + ' : ' + linecount(sampleText))
+console.log('Longest word in ' + sampleText + ' : ' + longestword(sampleText))
