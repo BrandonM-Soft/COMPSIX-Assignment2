@@ -15,7 +15,7 @@ function linecount(file) {
 }
 
 function longestword(file) {
-    const content = fs.readFileSync(file, 'utf8');
+    var content = fs.readFileSync(file, 'utf8');
     const words = content.split(' ');
     var lgth = 0;
     var longest;
