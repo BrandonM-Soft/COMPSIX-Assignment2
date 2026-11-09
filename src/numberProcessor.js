@@ -1,6 +1,4 @@
 const fs = require('fs');
-const { constrainedMemory } = require('process');
-const file = './data/sample-numbers.txt'
 
 function sum(file) {
     const content = fs.readFileSync(file, 'utf8');
@@ -48,7 +46,3 @@ module.exports = {
     highLow,
     average
 };
-
-console.log('The sum of all numbers: ' + sum(file));
-console.log('The highest and lowest numbers: ' + highLow(file));
-console.log('The calculated average of all numbers: ' + average(file));
